@@ -3,7 +3,7 @@ $color-ligth-yellow: #ffe2a8;
 $color-green: #aadb55;
 
 $body-bg: #ccc;
-$body-color: $color-grey;
+// $body-color: $color-grey;
 
 html,
 body {
@@ -53,4 +53,29 @@ h3 {
 @font-face {
   font-family: "Lato-Bold";
   src: url("/fonts/Lato-Bold.ttf") format("truetype");
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Rambla-Bold";
+  src: url("/fonts/Rambla-Bold.ttf") format("truetype");
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Rambla-BoldItalic";
+  src: url("/fonts/Rambla-BoldItalic.ttf") format("truetype");
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Rambla-Italic";
+  src: url("/fonts/Rambla-Italic.ttf") format("truetype");
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Rambla-Regular";
+  src: url("/fonts/Rambla-Regular.ttf") format("truetype");
+  font-style: normal;
 }
