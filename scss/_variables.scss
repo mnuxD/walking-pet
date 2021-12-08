@@ -1,4 +1,56 @@
-$color-grey: #564b4b;
+$color-yellow: #f9ba3e;
+$color-ligth-yellow: #ffe2a8;
+$color-green: #aadb55;
 
 $body-bg: #ccc;
 $body-color: $color-grey;
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+h2,
+h3 {
+  margin: 0px;
+}
+* {
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: "Roboto-Light";
+  src: url("/fonts/Roboto-Light.ttf") format("truetype");
+  font-style: normal;
+}
+@font-face {
+  font-family: "Roboto-Regular";
+  src: url("/fonts/Roboto-Regular.ttf") format("truetype");
+  font-style: normal;
+}
+@font-face {
+  font-family: "Roboto-Bold";
+  src: url("/fonts/Roboto-Bold.ttf") format("truetype");
+  font-style: normal;
+}
+@font-face {
+  font-family: "Lato-Light";
+  src: url("/fonts/Lato-Light.ttf") format("truetype");
+  font-style: normal;
+}
+@font-face {
+  font-family: "Lato-Regular";
+  src: url("/fonts/Lato-Regular.ttf") format("truetype");
+  font-style: normal;
+}
+@font-face {
+  font-family: "Lato-Bold";
+  src: url("/fonts/Lato-Bold.ttf") format("truetype");
+}
