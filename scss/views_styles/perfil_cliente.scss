@@ -33,7 +33,9 @@ body {
   flex-wrap: wrap;
   border-bottom: 1px solid gray;
   column-gap: 3rem;
-  padding-bottom: 1rem;
+  padding-top: 2rem;
+  padding-bottom: 3rem;
+  margin-bottom: 10px;
 }
 .photo-container {
   display: flex;
@@ -45,14 +47,23 @@ body {
   max-width: 14rem;
 }
 .photo {
-  width: 150px;
-  height: 150px;
+  width: 200px;
+  height: 200px;
   border-radius: 50%;
 }
 .user-name {
-  font-size: 20px;
-  font-weight: bold;
+  font-size: 25px;
   margin: 0;
+  font-family: "Rambla-Regular";
+}
+
+.button-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 290px;
+  margin-left: -10px;
 }
 .info-container {
   display: flex;
@@ -61,11 +72,12 @@ body {
   max-width: 20rem;
 }
 .content-info {
-  font-weight: bold;
+  font-family: "Roboto-Bold";
   margin: 0;
 }
 .info {
-  margin-top: 0;
+  font-family: "Roboto-Regular";
+  margin-top: 5px;
 }
 .icon-button {
   height: 1.5rem;
@@ -78,6 +90,8 @@ body {
   background-color: white;
   border: grey 1px solid;
   box-shadow: 0 4px 2px -2px gray;
+  margin-left: 3%;
+  font-family: "Rambla-Bold";
 }
 .pet-seccion {
   padding: 1rem;
@@ -101,15 +115,16 @@ body {
   padding: 1rem;
 }
 .border-right {
-  border-right: 1px gray solid;
+  border-right: 1px solid rgba(0, 0, 0, 0.37);
 }
 .pet-name {
   margin: 0;
-  font-size: 18px;
-  font-weight: bold;
+  font-family: "Roboto-Regular";
+  font-size: 20px;
 }
 .pet-info {
   margin-top: 0.5rem;
+  font-family: "Roboto-Regular";
   margin-bottom: 0;
   font-style: italic;
 }
@@ -135,11 +150,17 @@ body {
 .title-plus-info {
   margin: 0;
   font-size: 1.2rem;
-  font-weight: 600;
+  font-family: "Roboto-Regular";
+  padding-top: 20px;
+  padding-left: 20px;
 }
 .plus-info {
   font-size: 1rem;
   margin-top: 0.5rem;
+  font-family: "Roboto-Regular";
+  padding-top: 20px;
+  padding-left: 20px;
+  text-align: justify;
 }
 .textarea {
   resize: none;
