@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/views_styles/perfil_paseador.css" />
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+    <title>Perfil</title>
+</head>
+
+<body>
+    <nav class="navBar">
+        <div class="navBar_container">
+            <p class="nombre">WalkingPET <img class="dogIcon" src="../images/dogIcon.png"></p>
+            <a class="nav-link dropdown-toggle" href="#" role="button" aria-expanded="false">
+                Manuel Baella <img class="user" src="../images/user.png">
+            </a>
+        </div>
+    </nav>
+    <section class="info-seccion">
+        <div class="photo-container">
+            <div class="photo-subcontainer">
+                <p class="price">S/. 16</p>
+                <img src="../images/person4.png" alt="Avatar" class="photo" />
+            </div>
+            <p class="user-name">Susan Avila</p>
+            <div class="rating">
+                <img class="star" src="https://img.icons8.com/fluency/48/000000/star.png" />
+                <img class="star" src="https://img.icons8.com/fluency/48/000000/star.png" />
+                <img class="star" src="https://img.icons8.com/fluency/48/000000/star.png" />
+                <img class="star" src="https://img.icons8.com/fluency/48/000000/star.png" />
+                <img class="star" src="https://img.icons8.com/fluency/48/000000/star.png" />
+            </div>
+            <p class="rating-number">5.0</p>
+            <p class="greeting">
+                Los perros tambien son el mejor amigo de las mujeres.
+            </p>
+            <p class="statistics">15 calificaciones | 19 paseos realizados</p>
+        </div>
+        <div class="info-container">
+            <p class="content-info">Presentación</p>
+            <p class="info">
+                Hola soy Helen, me encantan los perritos y pasar tiempo con ellos. En
+                nuestro tiempo juntos pasearemos por algun parque, haremos ejercicio y
+                jugaremos mucho :D
+            </p>
+            <p class="content-info">Disponible en:</p>
+            <div class="district-container">
+                <p class="district">Miraflores</p>
+                <p class="district">Barranco</p>
+                <p class="district">La Molina</p>
+                <p class="district">Breña</p>
+                <p class="district">San Isidro</p>
+            </div>
+            <div class="button-container">
+                <button class="button-perfil">
+                    <img class="icon-button" src="https://img.icons8.com/ios-filled/50/000000/dog-walking.png" />
+                    Ver mis citas
+                </button>
+                <button class="button-perfil" data-toggle="modal" data-target="#edit-profile">
+                    <img class="icon-button" src="https://img.icons8.com/windows/32/000000/pencil.png" />
+                    Editar Perfil
+                </button>
+                <div class="modal fade" id="edit-profile" data-bs-backdrop="static" data-bs-keyboard="false"
+                    tabindex="-1" aria-labelledby="edit-profileLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button class="close" data-dismiss="modal">X</button>
+                                <h5 class="modal-title" id="edit-profileLabel">
+                                    Editar Perfil
+                                </h5>
+                            </div>
+                            <div class="modal-body">
+                                <form class="row g-3">
+                                    <div class="name-lastname">
+                                        <input class="input-form form-middle" maxlength="15" placeholder="Nombre"
+                                            type="text" />
+                                        <input class="input-form form-middle" maxlength="15" placeholder="Apellido"
+                                            type="text" />
+                                    </div>
+                                    <input class="input-form phone" placeholder="Tarifa por hora" type="number" />
+                                    <input class="input-form" placeholder="Distritos en los que esta disponible"
+                                        type="text" />
+                                    <textarea placeholder="Saludo" class="textarea" rows="2" maxlength="40"></textarea>
+                                    <textarea placeholder="Mensaje de Presentación" class="textarea" rows="3"
+                                        maxlength="150"></textarea>
+                                    <input class="input-form phone" maxlength="15" placeholder="Número de Celular"
+                                        type="number" />
+                                    <span class="upload-photo">Subir una foto de perfil</span>
+                                    <input class="form-control file" type="file" />
+                                    <div class="footer-modal">
+                                        <button type="button" class="button-perfil button-modal" data-dismiss="modal">
+                                            Cerrar
+                                        </button>
+                                        <button class="button-perfil button-modal" type="submit">
+                                            Guardar
+                                        </button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="ratings">
+        <p class="ratings-title">Valoraciones de Susan Ortega</p>
+        <div class="rating-item">
+            <div class="rating-info">
+                <p class="rating-name">Manuel Baella</p>
+                <p class="rating-comment">
+                    Es genial y super amable. Sin duda la volveria a contratar.
+                </p>
+            </div>
+            <div class="rating">
+                <img class="star" src="https://img.icons8.com/fluency/48/000000/star.png" />
+                <img class="star" src="https://img.icons8.com/fluency/48/000000/star.png" />
+                <img class="star" src="https://img.icons8.com/fluency/48/000000/star.png" />
+                <img class="star" src="https://img.icons8.com/fluency/48/000000/star.png" />
+                <img class="star" src="https://img.icons8.com/fluency/48/000000/star.png" />
+            </div>
+        </div>
+        <div class="rating-item">
+            <div class="rating-info">
+                <p class="rating-name">Manuel Baella</p>
+                <p class="rating-comment">
+                    Es genial y super amable. Sin duda la volveria a contratar.
+                </p>
+            </div>
+            <div class="rating">
+                <img class="star" src="https://img.icons8.com/fluency/48/000000/star.png" />
+                <img class="star" src="https://img.icons8.com/fluency/48/000000/star.png" />
+                <img class="star" src="https://img.icons8.com/fluency/48/000000/star.png" />
+                <img class="star" src="https://img.icons8.com/fluency/48/000000/star.png" />
+                <img class="star" src="https://img.icons8.com/fluency/48/000000/star.png" />
+            </div>
+        </div>
+        <div class="rating-item">
+            <div class="rating-info">
+                <p class="rating-name">Manuel Baella</p>
+                <p class="rating-comment">
+                    Es genial y super amable. Sin duda la volveria a contratar.
+                </p>
+            </div>
+            <div class="rating">
+                <img class="star" src="https://img.icons8.com/fluency/48/000000/star.png" />
+                <img class="star" src="https://img.icons8.com/fluency/48/000000/star.png" />
+                <img class="star" src="https://img.icons8.com/fluency/48/000000/star.png" />
+                <img class="star" src="https://img.icons8.com/fluency/48/000000/star.png" />
+                <img class="star" src="https://img.icons8.com/fluency/48/000000/star.png" />
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>

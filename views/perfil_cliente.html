@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/views_styles/perfil_cliente.css" />
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+    <title>Perfil</title>
+</head>
+
+<body>
+    <nav class="navBar">
+        <div class="navBar_container">
+            <p class="nombre">WalkingPET <img class="dogIcon" src="../images/dogIcon.png"></p>
+            <a class="nav-link dropdown-toggle" href="#" role="button" aria-expanded="false">
+                Manuel Baella <img class="user" src="../images/user.png">
+            </a>
+        </div>
+    </nav>
+    <section class="info-seccion">
+        <div class="photo-container">
+            <img src="../images/user.png" alt="Avatar" class="photo" />
+            <p class="user-name">Manuel Baella</p>
+        </div>
+        <div class="info-container">
+            <p class="content-info">Dirección</p>
+            <p class="info">Av. Javier Prado 3145 Miraflores</p>
+            <p class="content-info">Teléfono:</p>
+            <p class="info">949567245</p>
+            <div class="button-container">
+                <button class="button-perfil">
+                    <img class="icon-button" src="https://img.icons8.com/ios-filled/50/000000/dog-walking.png" />
+                    Ver mis citas
+                </button>
+                <button class="button-perfil" data-toggle="modal" data-target="#edit-profile">
+                    <img class="icon-button" src="https://img.icons8.com/windows/32/000000/pencil.png" />
+                    Editar Perfil
+                </button>
+                <div class="modal fade" id="edit-profile" data-bs-backdrop="static" data-bs-keyboard="false"
+                    tabindex="-1" aria-labelledby="edit-profileLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button class="close" data-dismiss="modal">X</button>
+                                <h5 class="modal-title" id="edit-profileLabel">
+                                    Editar Perfil
+                                </h5>
+                            </div>
+                            <div class="modal-body">
+                                <form class="row g-3">
+                                    <div class="name-lastname">
+                                        <input class="input-form form-middle" maxlength="15" placeholder="Nombre"
+                                            type="text" />
+                                        <input class="input-form form-middle" maxlength="15" placeholder="Apellido"
+                                            type="text" />
+                                    </div>
+                                    <select class="input-form" name="distrito" id="distrito">
+                                        <option hidden selected>Distrito</option>
+                                        <option value="lamolina">La Molina</option>
+                                        <option value="miraflores">Miraflores</option>
+                                        <option value="sanmiguel">San Miguel</option>
+                                        <option value="sanisidro">San Isidro</option>
+                                        <option value="brena">Breña</option>
+                                        <option value="barranco">Barranco</option>
+                                    </select>
+                                    <textarea placeholder="Dirección" class="textarea" rows="2"></textarea>
+                                    <input class="input-form phone" maxlength="15" placeholder="Número de Celular"
+                                        type="number" />
+                                    <span class="upload-photo">Subir una foto de perfil</span>
+                                    <input class="form-control file" type="file" />
+                                    <div class="footer-modal">
+                                        <button type="button" class="button-perfil button-modal" data-dismiss="modal">
+                                            Cerrar
+                                        </button>
+                                        <button class="button-perfil button-modal" type="submit">
+                                            Guardar
+                                        </button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="pet-seccion">
+        <button class="button-perfil" data-toggle="modal" data-target="#add-pet">
+            <img class="icon-button" src="https://img.icons8.com/ios-glyphs/30/000000/plus-math.png" />
+            Añadir mascota
+        </button>
+        <div class="modal fade" id="add-pet" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+            aria-labelledby="add-petLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button class="close" data-dismiss="modal">X</button>
+                        <h5 class="modal-title" id="add-petLabel">Añadir mascota</h5>
+                    </div>
+                    <div class="modal-body">
+                        <form class="row g-3">
+                            <input class="input-form" maxlength="15" placeholder="Nombre de la mascota" type="text" />
+                            <input class="input-form" min="1" placeholder="Edad" type="number" />
+                            <select class="input-form" name="tamano" id="tamano">
+                                <option hidden selected>Tamaño</option>
+                                <option value="pequeno">Pequeño</option>
+                                <option value="mediano">Mediano</option>
+                                <option value="grande">Grande</option>
+                            </select>
+                            <select class="input-form" name="caracter" id="caracter">
+                                <option hidden selected>Caracter</option>
+                                <option value="amigable">Amigable</option>
+                                <option value="timido">Timido</option>
+                                <option value="agresivo">Agresivo</option>
+                                <option value="peligroso">Peligroso</option>
+                            </select>
+                            <textarea placeholder="Información adicional" class="textarea" rows="3"></textarea>
+                            <span class="upload-photo">Subir una foto de su mascota</span>
+                            <input class="form-control file" type="file" />
+                            <div class="footer-modal">
+                                <button type="button" class="button-perfil button-modal" data-dismiss="modal">
+                                    Cerrar
+                                </button>
+                                <button class="button-perfil button-modal" type="submit">
+                                    Añadir
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="pets-grid">
+            <!-- Card Pet -->
+            <div class="pet-container">
+                <button class="button-edit" data-toggle="modal" data-target="#edit-pet">
+                    <img class="icon-button-edit" src="https://img.icons8.com/windows/32/000000/pencil.png" />
+                </button>
+                <div class="modal fade" id="edit-pet" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+                    aria-labelledby="edit-petLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button class="close" data-dismiss="modal">X</button>
+                                <h5 class="modal-title" id="edit-petLabel">
+                                    Información de mi mascota
+                                </h5>
+                            </div>
+                            <div class="modal-body">
+                                <form class="row g-3">
+                                    <input class="input-form" maxlength="15" placeholder="Nombre de la mascota"
+                                        type="text" />
+                                    <input class="input-form" min="1" placeholder="Edad" type="number" />
+                                    <select class="input-form" name="tamano" id="tamano">
+                                        <option hidden selected>Tamaño</option>
+                                        <option value="pequeno">Pequeño</option>
+                                        <option value="mediano">Mediano</option>
+                                        <option value="grande">Grande</option>
+                                    </select>
+                                    <select class="input-form" name="caracter" id="caracter">
+                                        <option hidden selected>Caracter</option>
+                                        <option value="amigable">Amigable</option>
+                                        <option value="timido">Timido</option>
+                                        <option value="agresivo">Agresivo</option>
+                                        <option value="peligroso">Peligroso</option>
+                                    </select>
+                                    <textarea placeholder="Información adicional" class="textarea" rows="3"></textarea>
+                                    <span class="upload-photo">Subir una foto de su mascota</span>
+                                    <input class="form-control file" type="file" />
+                                    <div class="footer-modal">
+                                        <button type="button" class="button-perfil button-modal" data-dismiss="modal">
+                                            Cerrar
+                                        </button>
+                                        <button class="button-perfil button-modal" type="submit">
+                                            Guardar
+                                        </button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="photo-container border-right">
+                    <img class="photo" src="../images/dogPerfil.jpeg" />
+                    <p class="pet-name">Boby</p>
+                    <p class="pet-info">Edad: 1 año</p>
+                    <p class="pet-info">Tamaño: Pequeño</p>
+                    <p class="pet-info">Caracter: Amigable</p>
+                </div>
+                <div class="info-container">
+                    <p class="title-plus-info">Información adicional:</p>
+                    <p class="plus-info">
+                        Es muy juguetón, le gusta acercarse a otros perros. Es alérgico a
+                        las flores, no le gustan los gatos.
+                    </p>
+                </div>
+            </div>
+            <!-- Card Pet -->
+            <div class="pet-container">
+                <button class="button-edit" data-toggle="modal" data-target="#edit-pet">
+                    <img class="icon-button-edit" src="https://img.icons8.com/windows/32/000000/pencil.png" />
+                </button>
+                <div class="modal fade" id="edit-pet" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+                    aria-labelledby="edit-petLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button class="close" data-dismiss="modal">X</button>
+                                <h5 class="modal-title" id="edit-petLabel">
+                                    Información de mi mascota
+                                </h5>
+                            </div>
+                            <div class="modal-body">
+                                <form class="row g-3">
+                                    <input class="input-form" maxlength="15" placeholder="Nombre de la mascota"
+                                        type="text" />
+                                    <input class="input-form" min="1" placeholder="Edad" type="number" />
+                                    <select class="input-form" name="tamano" id="tamano">
+                                        <option hidden selected>Tamaño</option>
+                                        <option value="pequeno">Pequeño</option>
+                                        <option value="mediano">Mediano</option>
+                                        <option value="grande">Grande</option>
+                                    </select>
+                                    <select class="input-form" name="caracter" id="caracter">
+                                        <option hidden selected>Caracter</option>
+                                        <option value="amigable">Amigable</option>
+                                        <option value="timido">Timido</option>
+                                        <option value="agresivo">Agresivo</option>
+                                        <option value="peligroso">Peligroso</option>
+                                    </select>
+                                    <textarea placeholder="Información adicional" class="textarea" rows="3"></textarea>
+                                    <span class="upload-photo">Subir una foto de su mascota</span>
+                                    <input class="form-control file" type="file" />
+                                    <div class="footer-modal">
+                                        <button type="button" class="button-perfil button-modal" data-dismiss="modal">
+                                            Cerrar
+                                        </button>
+                                        <button class="button-perfil button-modal" type="submit">
+                                            Guardar
+                                        </button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="photo-container border-right">
+                    <img class="photo" src="../images/dogPerfil.jpeg" />
+                    <p class="pet-name">Boby</p>
+                    <p class="pet-info">Edad: 1 año</p>
+                    <p class="pet-info">Tamaño: Pequeño</p>
+                    <p class="pet-info">Caracter: Amigable</p>
+                </div>
+                <div class="info-container">
+                    <p class="title-plus-info">Información adicional:</p>
+                    <p class="plus-info">
+                        Es muy juguetón, le gusta acercarse a otros perros. Es alérgico a
+                        las flores, no le gustan los gatos.
+                    </p>
+                </div>
+            </div>
+            <div class="pet-container">
+                <button class="button-edit" data-toggle="modal" data-target="#edit-pet">
+                    <img class="icon-button-edit" src="https://img.icons8.com/windows/32/000000/pencil.png" />
+                </button>
+                <div class="modal fade" id="edit-pet" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+                    aria-labelledby="edit-petLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button class="close" data-dismiss="modal">X</button>
+                                <h5 class="modal-title" id="edit-petLabel">
+                                    Información de mi mascota
+                                </h5>
+                            </div>
+                            <div class="modal-body">
+                                <form class="row g-3">
+                                    <input class="input-form" maxlength="15" placeholder="Nombre de la mascota"
+                                        type="text" />
+                                    <input class="input-form" min="1" placeholder="Edad" type="number" />
+                                    <select class="input-form" name="tamano" id="tamano">
+                                        <option hidden selected>Tamaño</option>
+                                        <option value="pequeno">Pequeño</option>
+                                        <option value="mediano">Mediano</option>
+                                        <option value="grande">Grande</option>
+                                    </select>
+                                    <select class="input-form" name="caracter" id="caracter">
+                                        <option hidden selected>Caracter</option>
+                                        <option value="amigable">Amigable</option>
+                                        <option value="timido">Timido</option>
+                                        <option value="agresivo">Agresivo</option>
+                                        <option value="peligroso">Peligroso</option>
+                                    </select>
+                                    <textarea placeholder="Información adicional" class="textarea" rows="3"></textarea>
+                                    <span class="upload-photo">Subir una foto de su mascota</span>
+                                    <input class="form-control file" type="file" />
+                                    <div class="footer-modal">
+                                        <button type="button" class="button-perfil button-modal" data-dismiss="modal">
+                                            Cerrar
+                                        </button>
+                                        <button class="button-perfil button-modal" type="submit">
+                                            Guardar
+                                        </button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="photo-container border-right">
+                    <img class="photo" src="../images/dogPerfil.jpeg" />
+                    <p class="pet-name">Boby</p>
+                    <p class="pet-info">Edad: 1 año</p>
+                    <p class="pet-info">Tamaño: Pequeño</p>
+                    <p class="pet-info">Caracter: Amigable</p>
+                </div>
+                <div class="info-container">
+                    <p class="title-plus-info">Información adicional:</p>
+                    <p class="plus-info">
+                        Es muy juguetón, le gusta acercarse a otros perros. Es alérgico a
+                        las flores, no le gustan los gatos.
+                    </p>
+                </div>
+            </div>
+            <div class="pet-container">
+                <button class="button-edit" data-toggle="modal" data-target="#edit-pet">
+                    <img class="icon-button-edit" src="https://img.icons8.com/windows/32/000000/pencil.png" />
+                </button>
+                <div class="modal fade" id="edit-pet" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+                    aria-labelledby="edit-petLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button class="close" data-dismiss="modal">X</button>
+                                <h5 class="modal-title" id="edit-petLabel">
+                                    Información de mi mascota
+                                </h5>
+                            </div>
+                            <div class="modal-body">
+                                <form class="row g-3">
+                                    <input class="input-form" maxlength="15" placeholder="Nombre de la mascota"
+                                        type="text" />
+                                    <input class="input-form" min="1" placeholder="Edad" type="number" />
+                                    <select class="input-form" name="tamano" id="tamano">
+                                        <option hidden selected>Tamaño</option>
+                                        <option value="pequeno">Pequeño</option>
+                                        <option value="mediano">Mediano</option>
+                                        <option value="grande">Grande</option>
+                                    </select>
+                                    <select class="input-form" name="caracter" id="caracter">
+                                        <option hidden selected>Caracter</option>
+                                        <option value="amigable">Amigable</option>
+                                        <option value="timido">Timido</option>
+                                        <option value="agresivo">Agresivo</option>
+                                        <option value="peligroso">Peligroso</option>
+                                    </select>
+                                    <textarea placeholder="Información adicional" class="textarea" rows="3"></textarea>
+                                    <span class="upload-photo">Subir una foto de su mascota</span>
+                                    <input class="form-control file" type="file" />
+                                    <div class="footer-modal">
+                                        <button type="button" class="button-perfil button-modal" data-dismiss="modal">
+                                            Cerrar
+                                        </button>
+                                        <button class="button-perfil button-modal" type="submit">
+                                            Guardar
+                                        </button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="photo-container border-right">
+                    <img class="photo" src="../images/dogPerfil.jpeg" />
+                    <p class="pet-name">Boby</p>
+                    <p class="pet-info">Edad: 1 año</p>
+                    <p class="pet-info">Tamaño: Pequeño</p>
+                    <p class="pet-info">Caracter: Amigable</p>
+                </div>
+                <div class="info-container">
+                    <p class="title-plus-info">Información adicional:</p>
+                    <p class="plus-info">
+                        Es muy juguetón, le gusta acercarse a otros perros. Es alérgico a
+                        las flores, no le gustan los gatos.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>
