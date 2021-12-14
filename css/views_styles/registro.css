@@ -5,13 +5,6 @@
  * Copyright 2011-2021 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
  */
-@import url("./views_styles/after_login.scss");
-@import url("./views_styles/home.scss");
-@import url("./views_styles/perfil_cliente.scss");
-@import url("./views_styles/perfil_paseador.scss");
-@import url("./views_styles/login.scss");
-@import url("./views_styles/registro.scss");
-@import url("./views_styles/reserva_cita.scss");
 :root {
   --bs-blue: #0d6efd;
   --bs-indigo: #6610f2;
@@ -13137,5 +13130,76 @@ progress {
     --bs-gutter-y: 3rem;
   }
 }
+body {
+  background: fixed;
+  background-image: url("/images/backgroundBlur.png");
+  background-size: cover;
+  margin: 0;
+}
 
-/*# sourceMappingURL=style.css.map */
+.container {
+  width: 50%;
+}
+.container .text-center {
+  background-color: #f9ba3e;
+  border-radius: 65px;
+  margin-top: 5%;
+  position: relative;
+}
+.container .text-center h2, .container .text-center .h2 {
+  font-family: "Roboto-Bold";
+  font-size: 36px;
+}
+.container .row {
+  justify-content: center;
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 55px;
+  margin-top: -90px;
+  padding-top: 100px;
+  margin-bottom: 10%;
+}
+.container form .row {
+  background-color: rgba(255, 255, 255, 0.01);
+  margin-bottom: 0%;
+}
+.container form .mb-3 {
+  font-family: "Roboto-Bold";
+}
+.container form .d-block {
+  display: flex !important;
+  justify-content: space-around;
+}
+.container form .custom-control-label {
+  font-family: "Roboto-Bold";
+}
+.container form #iniciarSesion {
+  font-family: "Roboto-Bold";
+  text-align: center;
+  margin-top: -20px;
+}
+.container form .logo {
+  width: 300px;
+  margin-bottom: 20px;
+}
+.container form .btn-block {
+  width: 150px;
+  background-color: white;
+  color: black;
+  border: 0.3px solid #000000;
+  box-sizing: border-box;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 19px;
+  font-family: "Roboto-Bold";
+}
+
+@media (max-width: 995px) {
+  body {
+    min-width: 700px;
+  }
+
+  .p-lg-4 {
+    padding: 1.5rem !important;
+  }
+}
+
+/*# sourceMappingURL=registro.css.map */

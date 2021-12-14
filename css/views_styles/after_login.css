@@ -5,13 +5,6 @@
  * Copyright 2011-2021 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
  */
-@import url("./views_styles/after_login.scss");
-@import url("./views_styles/home.scss");
-@import url("./views_styles/perfil_cliente.scss");
-@import url("./views_styles/perfil_paseador.scss");
-@import url("./views_styles/login.scss");
-@import url("./views_styles/registro.scss");
-@import url("./views_styles/reserva_cita.scss");
 :root {
   --bs-blue: #0d6efd;
   --bs-indigo: #6610f2;
@@ -13137,5 +13130,155 @@ progress {
     --bs-gutter-y: 3rem;
   }
 }
+body {
+  background-color: white;
+}
 
-/*# sourceMappingURL=style.css.map */
+.navBar_container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  font-family: "Roboto-Regular";
+  background: #ffffff;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+.navBar_container .nombre {
+  color: #f9ba3e;
+  padding: 0.5rem 1rem;
+  margin: 0px;
+}
+.navBar_container .dogIcon,
+.navBar_container .user {
+  width: 40px;
+}
+.navBar_container .dropdown-toggle {
+  color: black;
+  font-family: "Rambla-Bold";
+}
+
+main {
+  width: 100%;
+}
+
+main .main_container {
+  display: flex;
+  align-items: stretch;
+  justify-content: space-between;
+  margin-left: 2%;
+}
+
+main section {
+  width: 25%;
+  display: flex;
+  align-self: stretch;
+  border-right: 1px solid #b7b7b7;
+  justify-content: center;
+}
+main section h2, main section .h2 {
+  font-family: "Roboto-Bold";
+  padding-bottom: 20px;
+  padding-top: 40px;
+}
+main section article div button {
+  font-family: "Roboto-Regular";
+}
+
+main aside {
+  width: 75%;
+  padding: 30px;
+  text-align: center;
+}
+
+.card {
+  border: 0.01px solid #888888;
+  box-sizing: border-box;
+  border-radius: 19px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  max-width: 395px;
+}
+.card figcaption {
+  background: #f9ba3e;
+  border-radius: 23px;
+  width: 25%;
+  color: #ffffff;
+  font-family: "Roboto-Bold";
+  position: relative;
+  left: 60%;
+  font-size: 1.5rem;
+  bottom: 3rem;
+  margin-bottom: -10%;
+}
+.card .card-img-top {
+  max-width: 240px;
+  max-height: 240px;
+  align-self: center;
+  margin-top: 10px;
+  box-sizing: border-box;
+  border-radius: 120px;
+}
+.card .card-title {
+  font-family: "Roboto-Regular";
+  font-size: 1.875rem;
+}
+.card .card-calification {
+  font-family: "Roboto-Bold";
+  font-size: 1.5625rem;
+}
+.card .card-text {
+  font-family: "Roboto-Regular";
+  font-size: 1.25rem;
+  font-style: italic;
+}
+.card .card-text span {
+  font-weight: bold;
+  font-style: normal;
+}
+.card .btn {
+  background: #ffffff;
+  border: 0.01px solid #888888;
+  box-sizing: border-box;
+  border-radius: 19px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  font-family: "Rambla-Bold";
+}
+.card .dogButton {
+  max-width: 30px;
+  margin-right: 5px;
+}
+
+@media (max-width: 1480px) {
+  main section {
+    justify-content: flex-start;
+    padding-right: 10px;
+    text-align: center;
+  }
+  main section article h2, main section article .h2 {
+    font-size: 25px;
+  }
+
+  .row-cols-md-3 > * {
+    flex: 0 0 auto;
+    width: 50%;
+  }
+}
+@media (max-width: 880px) {
+  body {
+    min-width: 700px;
+  }
+
+  main section article h2, main section article .h2 {
+    font-size: 20px;
+  }
+
+  .row-cols-md-3 > * {
+    flex: 0 0 auto;
+    width: 100%;
+  }
+
+  .card {
+    max-width: none;
+  }
+}
+
+/*# sourceMappingURL=after_login.css.map */

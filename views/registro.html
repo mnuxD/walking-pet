@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="../css/views_styles/registro.css" rel="stylesheet">
+    <title>Registro</title>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="py-5 text-center p-lg-4">
+            <h2>Registro</h2>
+        </div>
+        <div class="row">
+            <div class="col-md-8 order-md-1 justify-content-center">
+                <form class="needs-validation" novalidate>
+                    <div class="d-block my-3">
+                        <div class="custom-control custom-radio">
+                            <input id="credit" name="paymentMethod" type="radio" class="custom-control-input" checked
+                                required>
+                            <label class="custom-control-label" for="credit">Soy Cliente</label>
+                        </div>
+                        <div class="custom-control custom-radio">
+                            <input id="debit" name="paymentMethod" type="radio" class="custom-control-input" required>
+                            <label class="custom-control-label" for="debit">Soy Paseador</label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6 mb-3">
+                            <input type="text" class="form-control" id="firstName" placeholder="Nombre" value=""
+                                required>
+                            <div class="invalid-feedback">
+                                El campo es obligatorio.
+                            </div>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <input type="text" class="form-control" id="lastName" placeholder="Apellido" value=""
+                                required>
+                            <div class="invalid-feedback">
+                                El campo es obligatorio.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <input type="email" class="form-control" id="email" placeholder="Correo Electrónico">
+                        <div class="invalid-feedback">
+                            Por favor, ingresar un correo válido.
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <input type="text" class="form-control" id="password" placeholder="Contraseña" required>
+                        <div class="invalid-feedback">
+                            Ingresar una contraseña válida.
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <input type="text" class="form-control" id="confirmPassword" placeholder="Confirmar Contraseña"
+                            required>
+                        <div class="invalid-feedback">
+                            Las contraseñas deben coincidir.
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <input type="text" class="form-control" id="phoneNumber" placeholder="Teléfono Fijo / Móvil"
+                            required>
+                        <div class="invalid-feedback">
+                            El número debe existir.
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <select class="form-select d-block w-100" id="country" required>
+                            <option value="">Ciudad</option>
+                            <option>Lima</option>
+                            <option>Cuzco</option>
+                            <option>Arequipa</option>
+                            <option>Trujillo</option>
+                            <option>Chiclayo</option>
+                            <option>Tacna</option>
+                            <option>Piura</option>
+                        </select>
+                        <div class="invalid-feedback">
+                            Please select a valid country.
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <input type="text" class="form-control" id="direction" placeholder="Dirección" required>
+                        <div class="invalid-feedback">
+                            Por favor, ingresar una direccion válida.
+                        </div>
+                    </div>
+                    <div class="custom-control custom-checkbox">
+                        <input type="checkbox" class="custom-control-input" id="AcceptTerms">
+                        <label class="custom-control-label" for="AcceptTerms">Acepto los <a href="#"
+                                class="link-primary">Términos y Condiciones</a></label>
+                    </div>
+                    <div class="row">
+                        <button class="btn btn-primary btn-lg btn-block" type="submit">Registrarse</button>
+                    </div>
+                    <hr class="mb-4">
+                    <div class="row">
+                        <p id="iniciarSesion">¿Ya tienes una cuenta? <a href="#" class="link-primary">Inicia sesión.</a>
+                        </p>
+                        <img class="logo" src="../images/logo.png">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
